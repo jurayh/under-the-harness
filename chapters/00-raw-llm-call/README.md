@@ -3,6 +3,21 @@
 > The layer: one request, one response. No loop, no tools, no memory.
 > Everything else in this curriculum is machinery around this call.
 
+## The setup -- The Morning Bell
+
+You own a tiny café, **The Morning Bell**. Your counter help is
+**Tab** -- the agent you build in this course, one layer per
+chapter. The regulars, whose cards live by the register:
+**Sasha** (oat-milk latte, window seat), **Mina** (nine, school
+group, severe peanut allergy -- the red card by the counter, *no
+peanuts at the prep counter, ever*, exists because of her),
+**Aldo** (decaf, the crossword, pays cash), and **Priya** (the
+office order, Fridays). A café is honest ground for learning
+this: stock, money, and the queue can all be counted exactly,
+and every mistake has a cost you can see -- which is how this
+course can grade you exactly instead of by feel. The Day below
+is the same Day every chapter replays.
+
 ## 1. The failure this layer prevents -- shown
 
 Here is the agent this whole course builds: **Tab**, who runs
