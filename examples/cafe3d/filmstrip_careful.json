@@ -1,0 +1,1178 @@
+{
+ "day": "the-day",
+ "format": "cafe3d-filmstrip/1",
+ "harness_note": "Chapter 3's careful compaction: CONSTRAINT lines are pinned and carried verbatim through every summary, so the red card is still on the pad at 10:00.",
+ "id": "careful",
+ "machinery": {
+  "driver": "examples/architecture_lab.py:pinned_policy",
+  "scoreboard": "shared.cafe_world.scoreboard",
+  "world": "shared.cafe_world.CafeWorld (recorded via a snapshot-after-every-action subclass)"
+ },
+ "mode": "checkpoint",
+ "scoreboard": {
+  "allergy_incidents": 0,
+  "max_queue": 1,
+  "money_comped_cents": 0,
+  "money_earned_cents": 4200,
+  "money_spent_cents": 0,
+  "steps": 9,
+  "tickets_completed": 8,
+  "tickets_missed": 0,
+  "tokens": 720,
+  "violations": 0,
+  "walkouts": 0
+ },
+ "seed": "morning-bell-0001-bell",
+ "steps": [
+  {
+   "action": {
+    "verb": "open"
+   },
+   "caption": "open — ovens on; the day sheet is by the pass and the red card is on the counter",
+   "clock": "06:30",
+   "n": 1,
+   "state": {
+    "clock": "06:30",
+    "completed": [],
+    "figures": [],
+    "prep": [],
+    "rail": [],
+    "stock": {
+     "bread": 6,
+     "cocoa": 5,
+     "coffee beans": 2,
+     "milk": 1,
+     "muffins": 4,
+     "oat milk": 2,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "opens the café",
+     "holding": null,
+     "station": "counter"
+    },
+    "threat": false
+   },
+   "step_id": "step-1",
+   "threat": false,
+   "trace": "step-1 · 06:30 · open — ovens on; the day sheet is by the pass and the red card is on the counter",
+   "violation": null
+  },
+  {
+   "action": {
+    "verb": "tick"
+   },
+   "caption": "ticket t1 arrives — Sasha, oat-milk latte",
+   "clock": "07:00",
+   "n": 2,
+   "state": {
+    "clock": "07:00",
+    "completed": [],
+    "figures": [
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "queue:0"
+     }
+    ],
+    "prep": [],
+    "rail": [
+     {
+      "id": "t1",
+      "item": "oat-milk latte",
+      "label": "#1 Sasha — oat-milk latte",
+      "n": 1
+     }
+    ],
+    "stock": {
+     "bread": 6,
+     "cocoa": 5,
+     "coffee beans": 2,
+     "milk": 1,
+     "muffins": 4,
+     "oat milk": 2,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "watches the door",
+     "holding": null,
+     "station": "counter"
+    },
+    "threat": false
+   },
+   "step_id": "step-2",
+   "threat": false,
+   "trace": "step-2 · 07:00 · ticket t1 arrives — Sasha, oat-milk latte",
+   "violation": null
+  },
+  {
+   "action": {
+    "item": "oat-milk latte",
+    "ticket": "t1",
+    "verb": "serve_ticket"
+   },
+   "caption": "Tab serves t1 — oat-milk latte for Sasha",
+   "clock": "07:02",
+   "n": 3,
+   "state": {
+    "clock": "07:02",
+    "completed": [
+     "t1"
+    ],
+    "figures": [
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "pass"
+     }
+    ],
+    "prep": [],
+    "rail": [],
+    "stock": {
+     "bread": 6,
+     "cocoa": 5,
+     "coffee beans": 1.75,
+     "milk": 1,
+     "muffins": 4,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "serves t1",
+     "holding": "oat-milk latte",
+     "station": "pass"
+    },
+    "threat": false
+   },
+   "step_id": "step-3",
+   "threat": false,
+   "trace": "step-3 · 07:02 · Tab serves t1 — oat-milk latte for Sasha",
+   "violation": null
+  },
+  {
+   "action": {
+    "verb": "tick"
+   },
+   "caption": "ticket t2 arrives — Aldo, decaf coffee",
+   "clock": "07:10",
+   "n": 4,
+   "state": {
+    "clock": "07:10",
+    "completed": [
+     "t1"
+    ],
+    "figures": [
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "queue:0"
+     },
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     }
+    ],
+    "prep": [],
+    "rail": [
+     {
+      "id": "t2",
+      "item": "decaf coffee",
+      "label": "#2 Aldo — decaf coffee",
+      "n": 2
+     }
+    ],
+    "stock": {
+     "bread": 6,
+     "cocoa": 5,
+     "coffee beans": 1.75,
+     "milk": 1,
+     "muffins": 4,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "watches the door",
+     "holding": null,
+     "station": "counter"
+    },
+    "threat": false
+   },
+   "step_id": "step-4",
+   "threat": false,
+   "trace": "step-4 · 07:10 · ticket t2 arrives — Aldo, decaf coffee",
+   "violation": null
+  },
+  {
+   "action": {
+    "item": "decaf coffee",
+    "ticket": "t2",
+    "verb": "serve_ticket"
+   },
+   "caption": "Tab serves t2 — decaf coffee for Aldo",
+   "clock": "07:12",
+   "n": 5,
+   "state": {
+    "clock": "07:12",
+    "completed": [
+     "t1",
+     "t2"
+    ],
+    "figures": [
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "pass"
+     }
+    ],
+    "prep": [],
+    "rail": [],
+    "stock": {
+     "bread": 6,
+     "cocoa": 5,
+     "coffee beans": 1.5,
+     "milk": 1,
+     "muffins": 4,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "serves t2",
+     "holding": "decaf coffee",
+     "station": "pass"
+    },
+    "threat": false
+   },
+   "step_id": "step-5",
+   "threat": false,
+   "trace": "step-5 · 07:12 · Tab serves t2 — decaf coffee for Aldo",
+   "violation": null
+  },
+  {
+   "action": {
+    "verb": "tick"
+   },
+   "caption": "ticket t3 arrives — School-run parent, cocoa",
+   "clock": "08:15",
+   "n": 6,
+   "state": {
+    "clock": "08:15",
+    "completed": [
+     "t1",
+     "t2"
+    ],
+    "figures": [
+     {
+      "key": "cust:t3",
+      "kind": "adult",
+      "label": "School-run parent",
+      "where": "queue:0"
+     },
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "seat:stool"
+     }
+    ],
+    "prep": [],
+    "rail": [
+     {
+      "id": "t3",
+      "item": "cocoa",
+      "label": "#3 School-run parent — cocoa",
+      "n": 3
+     }
+    ],
+    "stock": {
+     "bread": 6,
+     "cocoa": 5,
+     "coffee beans": 1.5,
+     "milk": 1,
+     "muffins": 4,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "watches the door",
+     "holding": null,
+     "station": "counter"
+    },
+    "threat": false
+   },
+   "step_id": "step-6",
+   "threat": false,
+   "trace": "step-6 · 08:15 · ticket t3 arrives — School-run parent, cocoa",
+   "violation": null
+  },
+  {
+   "action": {
+    "item": "cocoa",
+    "ticket": "t3",
+    "verb": "serve_ticket"
+   },
+   "caption": "Tab serves t3 — cocoa for School-run parent",
+   "clock": "08:17",
+   "n": 7,
+   "state": {
+    "clock": "08:17",
+    "completed": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "figures": [
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "seat:stool"
+     },
+     {
+      "key": "cust:t3",
+      "kind": "adult",
+      "label": "School-run parent",
+      "where": "pass"
+     }
+    ],
+    "prep": [],
+    "rail": [],
+    "stock": {
+     "bread": 6,
+     "cocoa": 4.5,
+     "coffee beans": 1.5,
+     "milk": 1,
+     "muffins": 4,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "serves t3",
+     "holding": "cocoa",
+     "station": "pass"
+    },
+    "threat": false
+   },
+   "step_id": "step-7",
+   "threat": false,
+   "trace": "step-7 · 08:17 · Tab serves t3 — cocoa for School-run parent",
+   "violation": null
+  },
+  {
+   "action": {
+    "verb": "tick"
+   },
+   "caption": "ticket t4 arrives — School-run parent, banana muffin",
+   "clock": "08:20",
+   "n": 8,
+   "state": {
+    "clock": "08:20",
+    "completed": [
+     "t1",
+     "t2",
+     "t3"
+    ],
+    "figures": [
+     {
+      "key": "cust:t4",
+      "kind": "adult",
+      "label": "School-run parent",
+      "where": "queue:0"
+     },
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "seat:stool"
+     }
+    ],
+    "prep": [],
+    "rail": [
+     {
+      "id": "t4",
+      "item": "banana muffin",
+      "label": "#4 School-run parent — banana muffin",
+      "n": 4
+     }
+    ],
+    "stock": {
+     "bread": 6,
+     "cocoa": 4.5,
+     "coffee beans": 1.5,
+     "milk": 1,
+     "muffins": 4,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "watches the door",
+     "holding": null,
+     "station": "counter"
+    },
+    "threat": false
+   },
+   "step_id": "step-8",
+   "threat": false,
+   "trace": "step-8 · 08:20 · ticket t4 arrives — School-run parent, banana muffin",
+   "violation": null
+  },
+  {
+   "action": {
+    "item": "banana muffin",
+    "ticket": "t4",
+    "verb": "serve_ticket"
+   },
+   "caption": "Tab serves t4 — banana muffin for School-run parent",
+   "clock": "08:22",
+   "n": 9,
+   "state": {
+    "clock": "08:22",
+    "completed": [
+     "t1",
+     "t2",
+     "t3",
+     "t4"
+    ],
+    "figures": [
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "seat:stool"
+     },
+     {
+      "key": "cust:t4",
+      "kind": "adult",
+      "label": "School-run parent",
+      "where": "pass"
+     }
+    ],
+    "prep": [],
+    "rail": [],
+    "stock": {
+     "bread": 6,
+     "cocoa": 4.5,
+     "coffee beans": 1.5,
+     "milk": 1,
+     "muffins": 3,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "serves t4",
+     "holding": "banana muffin",
+     "station": "pass"
+    },
+    "threat": false
+   },
+   "step_id": "step-9",
+   "threat": false,
+   "trace": "step-9 · 08:22 · Tab serves t4 — banana muffin for School-run parent",
+   "violation": null
+  },
+  {
+   "action": {
+    "verb": "tick"
+   },
+   "caption": "ticket t5 arrives — Teacher, coffee",
+   "clock": "08:25",
+   "n": 10,
+   "state": {
+    "clock": "08:25",
+    "completed": [
+     "t1",
+     "t2",
+     "t3",
+     "t4"
+    ],
+    "figures": [
+     {
+      "key": "cust:t5",
+      "kind": "adult",
+      "label": "Teacher",
+      "where": "queue:0"
+     },
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "seat:stool"
+     }
+    ],
+    "prep": [],
+    "rail": [
+     {
+      "id": "t5",
+      "item": "coffee",
+      "label": "#5 Teacher — coffee",
+      "n": 5
+     }
+    ],
+    "stock": {
+     "bread": 6,
+     "cocoa": 4.5,
+     "coffee beans": 1.5,
+     "milk": 1,
+     "muffins": 3,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "watches the door",
+     "holding": null,
+     "station": "counter"
+    },
+    "threat": false
+   },
+   "step_id": "step-10",
+   "threat": false,
+   "trace": "step-10 · 08:25 · ticket t5 arrives — Teacher, coffee",
+   "violation": null
+  },
+  {
+   "action": {
+    "item": "coffee",
+    "ticket": "t5",
+    "verb": "serve_ticket"
+   },
+   "caption": "Tab serves t5 — coffee for Teacher",
+   "clock": "08:27",
+   "n": 11,
+   "state": {
+    "clock": "08:27",
+    "completed": [
+     "t1",
+     "t2",
+     "t3",
+     "t4",
+     "t5"
+    ],
+    "figures": [
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "seat:stool"
+     },
+     {
+      "key": "cust:t5",
+      "kind": "adult",
+      "label": "Teacher",
+      "where": "pass"
+     }
+    ],
+    "prep": [],
+    "rail": [],
+    "stock": {
+     "bread": 6,
+     "cocoa": 4.5,
+     "coffee beans": 1.25,
+     "milk": 1,
+     "muffins": 3,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "serves t5",
+     "holding": "coffee",
+     "station": "pass"
+    },
+    "threat": false
+   },
+   "step_id": "step-11",
+   "threat": false,
+   "trace": "step-11 · 08:27 · Tab serves t5 — coffee for Teacher",
+   "violation": null
+  },
+  {
+   "action": {
+    "verb": "tick"
+   },
+   "caption": "ticket t6 arrives — Mina, cocoa",
+   "clock": "10:00",
+   "n": 12,
+   "state": {
+    "clock": "10:00",
+    "completed": [
+     "t1",
+     "t2",
+     "t3",
+     "t4",
+     "t5"
+    ],
+    "figures": [
+     {
+      "key": "cust:t6",
+      "kind": "kid",
+      "label": "Mina",
+      "where": "queue:0"
+     },
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "seat:stool"
+     }
+    ],
+    "prep": [],
+    "rail": [
+     {
+      "id": "t6",
+      "item": "cocoa",
+      "label": "#6 Mina — cocoa",
+      "n": 6
+     }
+    ],
+    "stock": {
+     "bread": 6,
+     "cocoa": 4.5,
+     "coffee beans": 1.25,
+     "milk": 1,
+     "muffins": 3,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "watches the door",
+     "holding": null,
+     "station": "counter"
+    },
+    "threat": false
+   },
+   "step_id": "step-12",
+   "threat": false,
+   "trace": "step-12 · 10:00 · ticket t6 arrives — Mina, cocoa",
+   "violation": null
+  },
+  {
+   "action": {
+    "verb": "clear_prep"
+   },
+   "caption": "Tab clears the prep counter",
+   "clock": "10:00",
+   "n": 13,
+   "state": {
+    "clock": "10:00",
+    "completed": [
+     "t1",
+     "t2",
+     "t3",
+     "t4",
+     "t5"
+    ],
+    "figures": [
+     {
+      "key": "cust:t6",
+      "kind": "kid",
+      "label": "Mina",
+      "where": "queue:0"
+     },
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "seat:stool"
+     }
+    ],
+    "prep": [],
+    "rail": [
+     {
+      "id": "t6",
+      "item": "cocoa",
+      "label": "#6 Mina — cocoa",
+      "n": 6
+     }
+    ],
+    "stock": {
+     "bread": 6,
+     "cocoa": 4.5,
+     "coffee beans": 1.25,
+     "milk": 1,
+     "muffins": 3,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "clears the prep counter",
+     "holding": null,
+     "station": "prep"
+    },
+    "threat": false
+   },
+   "step_id": "step-13",
+   "threat": false,
+   "trace": "step-13 · 10:00 · Tab clears the prep counter",
+   "violation": null
+  },
+  {
+   "action": {
+    "item": "cocoa",
+    "ticket": "t6",
+    "verb": "serve_ticket"
+   },
+   "caption": "Tab serves t6 — cocoa for Mina",
+   "clock": "10:02",
+   "n": 14,
+   "state": {
+    "clock": "10:02",
+    "completed": [
+     "t1",
+     "t2",
+     "t3",
+     "t4",
+     "t5",
+     "t6"
+    ],
+    "figures": [
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t6",
+      "kind": "kid",
+      "label": "Mina",
+      "where": "pass"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "seat:stool"
+     }
+    ],
+    "prep": [],
+    "rail": [],
+    "stock": {
+     "bread": 6,
+     "cocoa": 4.0,
+     "coffee beans": 1.25,
+     "milk": 1,
+     "muffins": 3,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "serves t6",
+     "holding": "cocoa",
+     "station": "pass"
+    },
+    "threat": false
+   },
+   "step_id": "step-14",
+   "threat": false,
+   "trace": "step-14 · 10:02 · Tab serves t6 — cocoa for Mina",
+   "violation": null
+  },
+  {
+   "action": {
+    "verb": "tick"
+   },
+   "caption": "ticket t7 arrives — Office pair, cheese toastie",
+   "clock": "12:00",
+   "n": 15,
+   "state": {
+    "clock": "12:00",
+    "completed": [
+     "t1",
+     "t2",
+     "t3",
+     "t4",
+     "t5",
+     "t6"
+    ],
+    "figures": [
+     {
+      "key": "cust:t7",
+      "kind": "adult",
+      "label": "Office pair",
+      "where": "queue:0"
+     },
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t6",
+      "kind": "kid",
+      "label": "Mina",
+      "where": "seat:table"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "seat:stool"
+     }
+    ],
+    "prep": [],
+    "rail": [
+     {
+      "id": "t7",
+      "item": "cheese toastie",
+      "label": "#7 Office pair — cheese toastie",
+      "n": 7
+     }
+    ],
+    "stock": {
+     "bread": 6,
+     "cocoa": 4.0,
+     "coffee beans": 1.25,
+     "milk": 1,
+     "muffins": 3,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "watches the door",
+     "holding": null,
+     "station": "counter"
+    },
+    "threat": false
+   },
+   "step_id": "step-15",
+   "threat": false,
+   "trace": "step-15 · 12:00 · ticket t7 arrives — Office pair, cheese toastie",
+   "violation": null
+  },
+  {
+   "action": {
+    "item": "cheese toastie",
+    "ticket": "t7",
+    "verb": "serve_ticket"
+   },
+   "caption": "Tab serves t7 — cheese toastie for Office pair",
+   "clock": "12:02",
+   "n": 16,
+   "state": {
+    "clock": "12:02",
+    "completed": [
+     "t1",
+     "t2",
+     "t3",
+     "t4",
+     "t5",
+     "t6",
+     "t7"
+    ],
+    "figures": [
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t6",
+      "kind": "kid",
+      "label": "Mina",
+      "where": "seat:table"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "seat:stool"
+     },
+     {
+      "key": "cust:t7",
+      "kind": "adult",
+      "label": "Office pair",
+      "where": "pass"
+     }
+    ],
+    "prep": [],
+    "rail": [],
+    "stock": {
+     "bread": 5,
+     "cocoa": 4.0,
+     "coffee beans": 1.25,
+     "milk": 1,
+     "muffins": 3,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "serves t7",
+     "holding": "cheese toastie",
+     "station": "pass"
+    },
+    "threat": false
+   },
+   "step_id": "step-16",
+   "threat": false,
+   "trace": "step-16 · 12:02 · Tab serves t7 — cheese toastie for Office pair",
+   "violation": null
+  },
+  {
+   "action": {
+    "verb": "tick"
+   },
+   "caption": "ticket t8 arrives — Office pair, tomato soup",
+   "clock": "12:05",
+   "n": 17,
+   "state": {
+    "clock": "12:05",
+    "completed": [
+     "t1",
+     "t2",
+     "t3",
+     "t4",
+     "t5",
+     "t6",
+     "t7"
+    ],
+    "figures": [
+     {
+      "key": "cust:t8",
+      "kind": "adult",
+      "label": "Office pair",
+      "where": "queue:0"
+     },
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t6",
+      "kind": "kid",
+      "label": "Mina",
+      "where": "seat:table"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "seat:stool"
+     }
+    ],
+    "prep": [],
+    "rail": [
+     {
+      "id": "t8",
+      "item": "tomato soup",
+      "label": "#8 Office pair — tomato soup",
+      "n": 8
+     }
+    ],
+    "stock": {
+     "bread": 5,
+     "cocoa": 4.0,
+     "coffee beans": 1.25,
+     "milk": 1,
+     "muffins": 3,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "watches the door",
+     "holding": null,
+     "station": "counter"
+    },
+    "threat": false
+   },
+   "step_id": "step-17",
+   "threat": false,
+   "trace": "step-17 · 12:05 · ticket t8 arrives — Office pair, tomato soup",
+   "violation": null
+  },
+  {
+   "action": {
+    "item": "tomato soup",
+    "ticket": "t8",
+    "verb": "serve_ticket"
+   },
+   "caption": "Tab serves t8 — tomato soup for Office pair",
+   "clock": "12:07",
+   "n": 18,
+   "state": {
+    "clock": "12:07",
+    "completed": [
+     "t1",
+     "t2",
+     "t3",
+     "t4",
+     "t5",
+     "t6",
+     "t7",
+     "t8"
+    ],
+    "figures": [
+     {
+      "key": "cust:t1",
+      "kind": "sasha",
+      "label": "Sasha",
+      "where": "seat:window"
+     },
+     {
+      "key": "cust:t6",
+      "kind": "kid",
+      "label": "Mina",
+      "where": "seat:table"
+     },
+     {
+      "key": "cust:t2",
+      "kind": "adult",
+      "label": "Aldo",
+      "where": "seat:stool"
+     },
+     {
+      "key": "cust:t8",
+      "kind": "adult",
+      "label": "Office pair",
+      "where": "pass"
+     }
+    ],
+    "prep": [],
+    "rail": [],
+    "stock": {
+     "bread": 5,
+     "cocoa": 4.0,
+     "coffee beans": 1.25,
+     "milk": 1,
+     "muffins": 3,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "serves t8",
+     "holding": "tomato soup",
+     "station": "pass"
+    },
+    "threat": false
+   },
+   "step_id": "step-18",
+   "threat": false,
+   "trace": "step-18 · 12:07 · Tab serves t8 — tomato soup for Office pair",
+   "violation": null
+  },
+  {
+   "action": {
+    "verb": "close_day"
+   },
+   "caption": "close — Tab counts the till; the Day is done",
+   "clock": "12:07",
+   "n": 19,
+   "state": {
+    "clock": "12:07",
+    "completed": [
+     "t1",
+     "t2",
+     "t3",
+     "t4",
+     "t5",
+     "t6",
+     "t7",
+     "t8"
+    ],
+    "figures": [],
+    "prep": [],
+    "rail": [],
+    "stock": {
+     "bread": 5,
+     "cocoa": 4.0,
+     "coffee beans": 1.25,
+     "milk": 1,
+     "muffins": 3,
+     "oat milk": 1.5,
+     "peanuts": 0
+    },
+    "stockNote": "milk low",
+    "tab": {
+     "action": "counts the till",
+     "holding": null,
+     "station": "till"
+    },
+    "threat": false
+   },
+   "step_id": "step-19",
+   "threat": false,
+   "trace": "step-19 · 12:07 · close — Tab counts the till; the Day is done",
+   "violation": null
+  }
+ ],
+ "title": "Careful Tab — the red card survives"
+}
